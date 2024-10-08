@@ -13,14 +13,15 @@ footer{
   margin-top: 67px;
   
   background-color: rgba(0, 0, 255, 0.585);
-  height: 350px;
+  
   padding: 80px;
   color: white;
   
 }
-h3{
+footer h3{
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 14px;
+  font-weight:600;
   text-align: left;
 }
 
@@ -45,9 +46,21 @@ h3{
 }
 
 .uppl a{
+  font-size: 12px;
   margin-bottom: 10px;
   color: white;
   text-decoration: none;
+  align-items: center;
+}
+
+.uppl a:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.uppl a p{
+  margin:0;
 }
 
 .uppl a img{
@@ -60,7 +73,7 @@ h3{
   width: 40px;
   height: 40px;
 }
-footer p{
+.copyright{
   display: flex;
   align-items:flex-end;
   justify-content: center;
@@ -71,15 +84,25 @@ footer p{
 @media (max-width: 860px){
   footer{
     margin-top: 67px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   footer img {
     height: 20px;
     width: 20px;
   }
   .socials{
-    margin-left: 10px;
+    margin-left: 5px;
+    
+  }
+  .uppl a img{
+    width: 20px;
+    height: 20px;
+  }
+  .socials a img {
+    
+    width: 20px;
+    height: 20px;
   }
 
 
@@ -89,4 +112,26 @@ footer p{
 
 /*-----OPNUNARTÍMI-----*/
 
+.opnunh2{
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
 
+.opnun-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 20px;
+}
+
+@media (max-width: 860px){
+  .opnun-container{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
