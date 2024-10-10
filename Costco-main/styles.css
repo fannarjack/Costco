@@ -1,0 +1,4 @@
+.food {
+  display: flex;
+  justify-content: flex-start;
+}
