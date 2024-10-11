@@ -166,8 +166,6 @@ a {
   font-size: 30px;
   font-weight: bold;
 }
-.back {
-}
 
 /* ======================
      4. Hero Section - contains styles for the main heading and the hero
@@ -430,10 +428,7 @@ a {
 
 /* Flex Utilities */
 
-.flex-xx {
-  /* display: flex;
-  justify-content: flex-start; */
-}
+
 
 .flex-x {
   display: flex;
@@ -610,7 +605,7 @@ button {
   gap: 20px; /* Spacing between each product */
   padding: 20px;
   max-width: 1200px; /* You can adjust this */
-  margin: ; /* Center the container */
+  /* Center the container */
 }
 
 /* Each individual product card */
@@ -673,4 +668,38 @@ button {
   width: 30px; /* Set the size for both icons */
   height: 20px;
   margin-top: 10px;
+}
+
+
+/*-----OPNUNARTÍMI-----*/
+
+.opnunh2{
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.opnun-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.opnun-container p {
+  margin-top: 10px;
+}
+.opnunartimar-container{
+  margin: 28px 0 76px 0;
+}
+
+@media (max-width: 860px){
+  .opnun-container{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
