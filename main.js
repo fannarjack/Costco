@@ -33,3 +33,111 @@ hamburger === null || hamburger === void 0 ? void 0 : hamburger.addEventListener
         }, 500);
     }
 });
+
+const vorur = document.querySelector(".vorur");
+// Grab the hamburger icon
+const underlist = document.querySelector(".underlist");
+// For the hamburger icon, add an event listener, so we know when it is clicked
+vorur === null || vorur === void 0 ? void 0 : vorur
+vorur.addEventListener("click", function () {
+    // If the menu is displayed, set the display to none, otherwise set it to block
+    // This will toggle the display of the menu overlay
+    if (underlist === null)
+        return;
+
+        underlist.classList.toggle("show");
+         // Prevent scrolling when the menu is open
+    }
+
+);
+
+const matur = document.querySelector(".matur");
+// Grab the hamburger icon
+const flokkar = document.querySelector(".flokkar");
+// For the hamburger icon, add an event listener, so we know when it is clicked
+matur === null || matur === void 0 ? void 0 : matur
+matur.addEventListener("click", function () {
+    // If the menu is displayed, set the display to none, otherwise set it to block
+    // This will toggle the display of the menu overlay
+    if (flokkar === null)
+        return;
+
+        flokkar.classList.toggle("show");
+         // Prevent scrolling when the menu is open
+    }
+
+);
+
+const products = [
+    {
+        name: "Pera",
+        price: "55 kr.",
+        unit: "Stk.",
+        image: "/images/pera.png",
+        imageClass: "product-img-pera"
+    },
+    {
+        name: "Pera lífræn",
+        price: "169 kr.",
+        unit: "Stk.",
+        image: "/images/peralifræn.png",
+        imageClass: "product-img"
+    },
+    {
+        name: "Perur í pakka",
+        price: "439 kr.",
+        unit: "Stk.",
+        image: "/images/perurpakki.png",
+        imageClass: "product-img-perupakki"
+    },
+    {
+        name: "Perur í pakka",
+        price: "569 kr.",
+        unit: "Stk.",
+        image: "/images/perurgrön.png",
+        imageClass: "product-img-perupakki"
+    }
+];
+// Function to create a product card
+function createProductCard(product) {
+    <div class="product-card">
+    <img class="heart-img" src="images/heart-regular.svg" alt="heart"/>
+    <img class="${product.imageClass}" src="${product.image}" alt="${product.name}"/>
+    <div class="product-text">
+        <div class="banana">
+            <p>${product.name}</p>
+        </div>
+        <div class="strong-price">
+            <p><strong>${product.price}</strong> ${product.unit}</p>
+        </div>
+    </div>
+    <div class="price-quantity">
+        <img src="/images/circle-info-solid.svg" alt="information"/>
+        <img src="/images/cart-shopping-solid.svg" alt="cart"/>
+    </div>
+</div>
+}
+
+function displayProducts(category) {
+    const container = document.getElementById("products-container");
+    container.innerHTML = '';
+    const filteredProducts = products.filter(product => product.category === category);
+    filteredProducts.forEach(product => {
+        container.innerHTML += createProductCard(product);
+    });
+}
+
+// Add click event listeners to buttons
+        const buttons = document.querySelectorAll('.btn-container button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                displayProducts(this.textContent);
+            });
+        });
+        // Initial display
+        displayProducts('Perur');
+
+
+

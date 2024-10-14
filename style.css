@@ -133,11 +133,35 @@ ul {
   font-size: 14px;
   font-weight: 200;
 }
+.underlist{
+  overflow: hidden;
+  max-height: 0;
+  transition:all 0.5s ease-in-out;
+}
+
+.underlist ul{
+  overflow: hidden;
+  max-height: 0;
+}
+.underlist.show{
+  max-height: 200px;
+  transition: all 0.5s ease-in-out;
+}
+
+.flokkar{
+  overflow: hidden;
+  max-height: 0px;
+  transition:all 0.5s ease-in-out;
+}
+.flokkar.show{
+  max-height: 200px;
+  transition: all 0.5s ease-in-out;
+}
 
 li {
   display: flex;
   justify-content: flex-start;
-  margin: 15px;
+  margin-bottom: 15px;
 }
 a {
   color: white;
@@ -157,13 +181,30 @@ a {
   background-color: #0073b9;
   z-index: 9; /* Below the navbar, but above other content */
 }
+.back{
+  color: white;
+  margin: 20px 28px 43px 20px;
 
+  display: flex;
+  justify-content: space-between;
+}
+.back p{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;/*thinner*/
+  text-underline-offset: 3px;/*distance*/
+  font-size: 16px;
+}
+
+.x{
+  font-weight: 600;
+  font-size: 16px;
+}
 .mobile-links {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 10%;
   font-size: 30px;
+  
   font-weight: bold;
 }
 
