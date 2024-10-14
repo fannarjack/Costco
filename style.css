@@ -130,14 +130,42 @@ ul {
   text-transform: uppercase;
 }
 .underlist a {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 200;
+  text-transform: lowercase;
+}
+.underlist {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.underlist ul {
+  overflow: visable;
+  max-height: 0;
+}
+.underlist.show {
+  max-height: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.flokkar {
+  overflow: hidden;
+  max-height: 0px;
+  transition: all 0.5s ease-in-out;
+  text-transform: lowercase;
+  font-family: futura;
+}
+
+.flokkar.show {
+  max-height: none;
+  transition: all 0.5s ease-in-out;
 }
 
 li {
   display: flex;
   justify-content: flex-start;
-  margin: 15px;
+  margin-bottom: 15px;
 }
 a {
   color: white;
@@ -147,6 +175,25 @@ a {
 .blacklink {
   color: #686868;
 }
+
+.x {
+  font-weight: 600;
+  font-size: 16px;
+}
+.back {
+  color: white;
+  margin: 20px 28px 43px 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.back p {
+  text-decoration: underline;
+  text-decoration-thickness: 1px; /*thinner*/
+  text-underline-offset: 3px; /*distance*/
+  font-size: 16px;
+}
+
 .menu-overlay {
   display: none; /* Initially hidden */
   position: absolute;
@@ -156,17 +203,35 @@ a {
   height: 100vh;
   background-color: #0073b9;
   z-index: 9; /* Below the navbar, but above other content */
+  overflow-y: auto;
 }
 
 .mobile-links {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 10%;
   font-size: 30px;
   font-weight: bold;
 }
-.back {
+
+.vorur {
+  line-height: 40px;
+  font-family: futura;
+}
+.list-b {
+  line-height: 40px;
+  font-weight: 700;
+  font-family: futura;
+}
+
+.matur a::first-letter,
+.vorur + .underlist li:nth-child(3) a::first-letter, /* Targets first letter of "Fatnaður" */
+.vorur + .underlist li:nth-child(4) a::first-letter, /* Targets first letter of "Heimili" */
+.vorur + .underlist li:nth-child(5) a::first-letter  /* Targets first letter of "Börn" */ {
+  text-transform: uppercase; /* Capitalizes the first letter */
+}
+.mobile-links.flokkar li a::first-letter {
+  text-transform: uppercase; /* Capitalize only the first letter */
 }
 
 /* ======================
@@ -176,9 +241,10 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 35svh;
+  height: 30svh;
   background-image: url(/images/halloween-gettyimages-1424736925.jpg);
-  background-size: cover;
+  background-size: 100% auto;
+  background-position: center center;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -261,7 +327,7 @@ a {
 .card-text {
   position: absolute;
   text-transform: uppercase;
-  bottom: 60px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
@@ -272,15 +338,28 @@ a {
   justify-content: center;
   text-align: center;
 }
+.card-icon {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+}
+.card-icon img {
+  width: 100%;
+  height: 50px;
+}
 
 .card-1 {
   background-color: #f2f2f2;
-  height: 250px;
+  height: 240px;
 }
 
 .card-2 {
   background-color: #f2f2f2;
-  height: 250px;
+  height: 240px;
 }
 .card-col1 {
   position: relative;
@@ -430,11 +509,6 @@ a {
 
 /* Flex Utilities */
 
-.flex-xx {
-  /* display: flex;
-  justify-content: flex-start; */
-}
-
 .flex-x {
   display: flex;
 }
@@ -560,6 +634,7 @@ footer h3 {
 }
 .food h4 {
   text-decoration: underline;
+  color: black;
   font-weight: 200;
   font-size: 18px;
 }
@@ -603,6 +678,9 @@ button {
   font-family: futura;
   border: 2px solid #0073b9;
 }
+.active {
+  display: block;
+}
 
 .products-container {
   display: grid;
@@ -610,7 +688,7 @@ button {
   gap: 20px; /* Spacing between each product */
   padding: 20px;
   max-width: 1200px; /* You can adjust this */
-  margin: ; /* Center the container */
+  /* Center the container */
 }
 
 /* Each individual product card */
@@ -638,6 +716,20 @@ button {
 .product-img {
   width: 120px;
   margin: 40px auto auto;
+  height: auto;
+  display: block;
+}
+.product-img-pera {
+  width: 60px;
+  margin: 40px auto auto;
+  height: auto;
+  display: block;
+  transform: rotate(45deg);
+}
+
+.product-img-perupakki {
+  width: 80px;
+  margin: 30px auto auto;
   height: auto;
   display: block;
 }
@@ -673,4 +765,117 @@ button {
   width: 30px; /* Set the size for both icons */
   height: 20px;
   margin-top: 10px;
+}
+
+/* Banana page */
+
+.products-container-single {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.product-card-single {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.product-img-single {
+  width: 200px;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+}
+.product-text-single {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 20px;
+  font-family: futura;
+}
+.kg-price {
+  font-size: 14px;
+  text-align: right;
+  margin-right: 20px;
+}
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+.price-quantity-single {
+  display: flex;
+  justify-content: space-between; /* Push info icon to the left, cart icon to the right */
+  align-items: center; /* Align items at the bottom */
+  border-top: 1px solid rgba(208, 208, 208, 0.659);
+}
+
+.gluten {
+  width: 28px;
+  margin-top: 10px;
+}
+.cart {
+  width: 22px;
+}
+.info-text-single {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 0px 30px 0 0;
+  line-height: 1.8;
+}
+.info-text-single-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  font-size: 15px;
+  margin: 10px 30px 0 0;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* pear page */
+.product-img-single-1 {
+  width: 100px;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+  transform: rotate(45deg);
+}
+
+/*-----OPNUNARTÍMI-----*/
+
+.opnunh2 {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.opnun-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.opnun-container p {
+  margin-top: 10px;
+}
+.opnunartimar-container {
+  margin: 28px 0 76px 0;
+}
+
+@media (max-width: 860px) {
+  .opnun-container {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
