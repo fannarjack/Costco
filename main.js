@@ -128,7 +128,7 @@ function createProductCard(product) {
     `;
 }
 
-const container = document.getElementById('products-container');
+const container = document.querySelector('.products-container');
 products.forEach(product => {
     container.innerHTML += createProductCard(product);
 });
