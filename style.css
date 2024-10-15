@@ -34,17 +34,17 @@ img {
      2. Header
      ====================== */
 header {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  width: 100%;
+  display: flex; /* Uses flexbox to layout items horizontally */
+  justify-content: space-between; /* Spaces out elements across the header */
+  z-index: 1; /* Ensures the header is on top of other content */
+  width: 100%; /* Full width of the page */
 }
 .nav-bar {
   justify-content: space-between;
-  display: flex;
+  display: flex; /* Flexbox for horizontal alignment */
   width: 100%;
-  border-radius: 32px;
-  position: relative;
+  border-radius: 32px; /* Rounded corners for the nav bar */
+  position: relative; /* Sets the nav bar's positioning context */
   z-index: 10;
   transition: background-color 0.5s ease-out;
   background-color: white;
@@ -62,13 +62,13 @@ header {
 
 .nav-bar-icons img {
   width: 24px; /* Adjust icon size */
-  height: auto;
+  height: auto; /* Ensures the height is proportionate */
 }
 .logo img {
   height: 150px;
-  width: 100%;
-  overflow: hidden;
-  object-fit: cover;
+  width: 100%; /* Makes the logo full width of its container */
+  overflow: hidden; /* Hides any overflow from the image */
+  object-fit: cover; /* Ensures the logo image fills the container */
 }
 
 /* Opening Hours */
@@ -89,7 +89,7 @@ header {
 
 .app-downloads {
   background-color: #0073b9;
-  margin: 20px 0px 0px;
+  margin: 20px 0px 0px; /* Adds margin on top, no margin on sides or bottom */
   display: flex;
   justify-content: left;
   align-items: center;
@@ -117,13 +117,13 @@ header {
 /* Mobile Navigation */
 
 nav {
-  align-items: center;
+  align-items: center; /* Vertically centers the navigation */
   justify-content: center;
 }
 
 ul {
-  display: flex;
-  justify-content: flex-start;
+  display: flex; /* Aligns list items vertically */
+  justify-content: flex-start; /* Aligns items to the start (left) */
   flex-direction: column;
   font-size: 10px;
   color: white;
@@ -136,7 +136,7 @@ ul {
 }
 .underlist {
   overflow: hidden;
-  max-height: 0;
+  max-height: 0; /* Collapses the dropdown (hidden state) */
   transition: all 0.5s ease-in-out;
 }
 
@@ -145,25 +145,25 @@ ul {
   max-height: 0;
 }
 .underlist.show {
-  max-height: none;
+  max-height: none; /* Removes the max-height limit (shows the full list) */
   transition: all 0.5s ease-in-out;
 }
 
 .flokkar {
-  overflow: hidden;
-  max-height: 0px;
+  overflow: hidden; /* Hides overflowing content */
+  max-height: 0px; /* Collapses the list */
   transition: all 0.5s ease-in-out;
   text-transform: lowercase;
   font-family: futura;
 }
 
 .flokkar.show {
-  max-height: none;
+  max-height: none; /* Expands the list */
   transition: all 0.5s ease-in-out;
 }
 
 li {
-  display: flex;
+  display: flex; /* Aligns list items horizontally */
   justify-content: flex-start;
   margin-bottom: 15px;
 }
@@ -196,11 +196,11 @@ a {
 
 .menu-overlay {
   display: none; /* Initially hidden */
-  position: absolute;
+  position: absolute; /* Positioned relative to the viewport */
   top: 20%; /* Positions the menu right below the navbar */
   left: 60px;
-  width: 90vw;
-  height: 100vh;
+  width: 90vw; /* Sets width to 90% of the viewport */
+  height: 100vh; /* Full height of the viewport */
   background-color: #0073b9;
   z-index: 9; /* Below the navbar, but above other content */
   overflow-y: auto;
@@ -238,10 +238,10 @@ a {
      4. Hero Section - contains styles for the main heading and the hero
      ====================== */
 .hero {
-  display: flex;
+  display: flex; /* Flexbox used to align content */
   justify-content: center;
   width: 100%;
-  height: 30svh;
+  height: 30svh; /* Sets height based on a scalable unit (30% of the viewport height) */
   background-image: url(/images/halloween-gettyimages-1424736925.jpg);
   background-size: 100% auto;
   background-position: center center;
@@ -251,7 +251,7 @@ a {
   margin-bottom: 10px;
 }
 .hero-text {
-  position: absolute;
+  position: absolute; /* Positions the text absolutely inside the hero */
   bottom: 40px;
   right: 30px;
   text-align: right;
@@ -503,21 +503,6 @@ a {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* ======================
-           7. Utilities
-           ====================== */
-
-/* Flex Utilities */
-
-.flex-x {
-  display: flex;
-}
-
-.flex-y {
-  display: flex;
-  flex-direction: column;
-}
-
 /*-----FOOTER-----*/
 
 footer {
@@ -639,12 +624,6 @@ footer h3 {
   font-weight: 200;
   font-size: 18px;
 }
-#matur:hover{
-  cursor: pointer;
-}
-#matur:active{
-  color: #686868;
-}
 .food p {
   font-size: 14px;
   font-weight: 500;
@@ -689,6 +668,11 @@ button {
   display: block;
 }
 
+/* This line defines how the grid will be structured:
+     - `repeat(auto-fill, ...)` automatically creates as many columns as will fit in the container.
+     - `minmax(200px, 1fr)` specifies that each column should be at least 200px wide but can grow to take up available space (1 fraction of the remaining space).
+     - In simpler terms, it makes sure each product card is at least 200px wide and distributes the rest of the available space equally among the columns. 
+     - If the container is too narrow to fit another 200px column, it will drop the item to the next row. */
 .products-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -779,22 +763,14 @@ button {
 /* Banana page */
 
 .products-container-single {
-  display: flex;
+  display: none;
   justify-content: center;
   padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-  z-index: 1000; /*var ekki að virka að setja index svo ég bara setti 1000 á það svo það virkar*/
 }
 .product-card-single {
   background-color: white;
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
@@ -803,26 +779,13 @@ button {
   box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-top: 4%;
-}
-
-.close{
-  color: #aaa;
-  font-size: 25px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus{
-  cursor: pointer;
-  color: black;
-
 }
 .product-img-single {
   width: 200px;
   margin: 0 auto; /* Center the image horizontally */
   display: block;
 }
+
 .product-text-single {
   text-align: left;
   margin: 5px 0;
