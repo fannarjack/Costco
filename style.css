@@ -632,11 +632,18 @@ footer h3 {
   font-family: futura;
   gap: 10px;
 }
+
 .food h4 {
   text-decoration: underline;
   color: black;
   font-weight: 200;
   font-size: 18px;
+}
+#matur:hover{
+  cursor: pointer;
+}
+#matur:active{
+  color: #686868;
 }
 .food p {
   font-size: 14px;
@@ -690,6 +697,7 @@ button {
   max-width: 1200px; /* You can adjust this */
   /* Center the container */
   /* Center the container */
+  cursor: pointer;
 }
 
 /* Each individual product card */
@@ -703,7 +711,7 @@ button {
   display: flex;
   flex-direction: column; /* Arrange content vertically */
   justify-content: space-between; /* Space out the content */
-  height: auto; /* auto height so it adjusts to content */
+  height: 270px; /* auto height so it adjusts to content */
 }
 
 .heart-img {
@@ -774,10 +782,19 @@ button {
   display: flex;
   justify-content: center;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1000; /*var ekki að virka að setja index svo ég bara setti 1000 á það svo það virkar*/
 }
 .product-card-single {
+  background-color: white;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
@@ -786,6 +803,20 @@ button {
   box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  margin: auto;
+  margin-top: 4%;
+}
+
+.close{
+  color: #aaa;
+  font-size: 25px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus{
+  cursor: pointer;
+  color: black;
+
 }
 .product-img-single {
   width: 200px;

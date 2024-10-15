@@ -71,7 +71,7 @@
    
     <main>
       <div class="food">
-        <h4>Matur</h4>
+        <h4 id="matur">Matur</h4>
         <div class="rule"></div>
         <p>Ávextir og grænmeti</p>
       </div>
@@ -85,140 +85,62 @@
       </div>
 
       <!-- Product Cards -->
-      <div class="products-container category-bananar">
-        <div class="product-card">
-          <img class="heart-img" src="images/heart-regular.svg" alt="heart"/>
-          <a href="banani.html">
-            <img class="product-img" src="/images/bananar.png" alt="Bananamynd"/>
-          </a>
-          <div class="product-text">
-            <div class="banana">
+      <div class="products-container">
+
+      </div>
+
+      <!--single product modal-->
+      <div class="products-container-single">
+        <div class="product-card-single">
+          <span class="close">&times;</span>
+          <img class="product-img-single" src="/images/bananar.png" alt="Bananamynd"/>
+          <div class="product-text-single">
+            <div class="name">
               <p>Bananar</p>
             </div>
-            <div class="strong-price">
-              <p><strong>80 kr.</strong> Stk.</p>
+            <div class="price-container">
+              <div class="strong-price">
+                <p><strong class="price">80 kr.</strong> Stk.</p>
+              </div>
+              <div class="kg-price">
+                <p>200 gr. - 325 kr /kg</p>
+              </div>
             </div>
-          </div>
-          <div class="price-quantity">
-            <img src="/images/circle-info-solid.svg" alt="information"/>
-            <img src="/images/cart-shopping-solid.svg" alt="cart"/>
-          </div>
-        </div> <!--column 1 end-->
-
-        <div class="product-card">
-          <img class="heart-img" src="images/heart-regular.svg" alt="heart"/>
-          <img class="product-img" src="/images/banani.png" alt="Bananamynd"/>
-          <div class="product-text">
-            <div class="banana">
-              <p>Banani ódýr</p>
+            <div class="price-quantity-single">
+              <div class="price-quantity-single-img">
+                <img class="gluten" src="/images/Vector.png" alt="gluten"/>
+                <img class="gluten" src="/images/Group.png" alt="gluten"/>
+              </div>
+              <img class="cart" src="/images/Icon.png" alt="cart"/></a>
             </div>
-            <div class="strong-price">
-              <p><strong>48 kr.</strong> Stk.</p>
+            <div class="info-container-single">
+              <div class="info-text-single">
+                <div class="info-text">
+                  <p><strong>Innihald:</strong></p>
+                  <p>Bananar</p>
+                </div>
+                <div class="info-text1">
+                  <p><strong>Orka í 100gr:</strong></p>
+                  <p>Kj: 389</p>
+                  <p>Kcal: 91</p>
+                </div>
+              </div>
+              <div class="info-text-single-1">
+                <div class="info-text1">
+                  <p><strong>Upprunaland:</strong></p>
+                  <p>Perú</p>
+                </div>
+                <div class="info-text1">
+                  <p><strong>Orkudreifing:</strong></p>
+                  <p>Prótín 5%</p>
+                  <p>Fita 2%</p>
+                  <p>Kolvetni 88%</p>
+                  <p>Trefjar 3%</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="price-quantity">
-            <!-- <a href="#" class="info-img"> -->
-            <img src="/images/circle-info-solid.svg" alt="information"/>
-            <!-- <a href="#" class="cart-img"> -->
-            <img src="/images/cart-shopping-solid.svg" alt="cart"/>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img class="heart-img" src="images/heart-regular.svg" alt="heart"/>
-          <img class="product-img" src="/images/bananar.png" alt="Bananamynd"/>
-          <div class="product-text">
-            <div class="banana">
-              <p>Bananar lífrænir búnt</p>
-            </div>
-            <div class="strong-price">
-              <p><strong>217 kr.</strong> Stk.</p>
-            </div>
-          </div>
-          <div class="price-quantity">
-            <!-- <a href="#" class="info-img"> -->
-                <img src="/images/circle-info-solid.svg" alt="information"/>
-            <!-- <a href="#" class="cart-img"> -->
-                <img src="/images/cart-shopping-solid.svg" alt="cart"/>
-          </div>
-        </div>
-      </div>
-          
-        <!-- peru cards -->
-
-        <div class="products-container category-perur" style="display: none";>
-          <div class="product-card">
-          <img class="heart-img" src="images/heart-regular.svg" alt="heart"/>
-          <img class="product-img-pera" src="/images/pera.png" alt="Perumynd"/>
-          <div class="product-text">
-            <div class="banana">
-              <p>Pera</p>
-            </div>
-            <div class="strong-price">
-              <p><strong>55 kr.</strong> Stk.</p>
-            </div>
-          </div>
-            <div class="price-quantity">
-              <img src="/images/circle-info-solid.svg" alt="information"/>
-              <img src="/images/cart-shopping-solid.svg" alt="cart"/>
-            </div>
-        </div> <!--column 1 end-->
-
-        <div class="product-card">
-          <img class="heart-img" src="images/heart-regular.svg" alt="heart"/>
-          <img class="product-img" src="/images/peralifræn.png" alt="Pera lífræn"/>
-          <div class="product-text">
-            <div class="Pera lífræn">
-            <p>Pera lífræn</p>
-          </div>
-            <div class="strong-price">
-            <p><strong>169 kr.</strong> Stk.</p>
-        </div>
-          </div>
-          <div class="price-quantity">
-            <!-- <a href="#" class="info-img"> -->
-                <img src="/images/circle-info-solid.svg" alt="information"/></a>
-            <!-- <a href="#" class="cart-img"> -->
-                <img src="/images/cart-shopping-solid.svg" alt="cart"/></a>
-          </div>
-        </div><!--column 2 end-->
-
-        <div class="product-card">
-            <img class="heart-img" src="images/heart-regular.svg" alt="heart"/></a>
-            <img class="product-img-perupakki" src="/images/perurpakki.png" alt="Perur perurpakki"/>
-          <div class="product-text">
-            <div class="banana">
-            <p>Perur í pakka</p>
-        </div>
-            <div class="strong-price">
-            <p><strong>439 kr.</strong> Stk.</p>
-        </div>
-          </div>
-          <div class="price-quantity">
-            <!-- <a href="#" class="info-img"> -->
-                <img src="/images/circle-info-solid.svg" alt="information"/></a>
-            <!-- <a href="#" class="cart-img"> -->
-                <img src="/images/cart-shopping-solid.svg" alt="cart"/></a>
-          </div>
-        </div><!--column 3 end-->
-        
-        <div class="product-card">
-          <img class="heart-img" src="images/heart-regular.svg" alt="heart"/></a>
-          <img class="product-img-perupakki" src="/images/perurgrön.png" alt="perur lífræn"/>
-        <div class="product-text">
-          <div class="banana">
-          <p>Perur í pakka</p>
-      </div>
-          <div class="strong-price">
-          <p><strong>569 kr.</strong> Stk.</p>
-      </div>
-        </div>
-        <div class="price-quantity">
-          
-              <img src="/images/circle-info-solid.svg" alt="information"/></a>
-         
-              <img src="/images/cart-shopping-solid.svg" alt="cart"/></a>
-        </div>
+          </div>  
+        </div>  
       </div> 
     </main>
 
