@@ -108,6 +108,30 @@ const products = [
         unit: "Stk.",
         image: "/images/perurgrön.png",
         imageClass: "product-img-perupakki"
+    },
+    {
+        category: "bananar",
+        name: "Banani ódýr",
+        price: "48 kr.",
+        unit: "Stk.",
+        image: "/images/banani.png",
+        imageClass: "product-img"
+    },
+    {
+        category: "bananar",
+        name: "Bananar",
+        price: "80 kr.",
+        unit: "Stk.",
+        image: "/images/bananar.png",
+        imageClass: "product-img"
+    },
+    {
+        category: "bananar",
+        name: "Bananar lífrænir búnt",
+        price: "217 kr.",
+        unit: "Stk.",
+        image: "/images/bananar.png",
+        imageClass: "product-img"
     }
 ];
 
@@ -132,17 +156,21 @@ function createProductCard(product) {
     `;
 }
 
+
 const container = document.querySelector('.products-container');
 products.forEach(product => {
     container.innerHTML += createProductCard(product);
 });
 
+const food = document.getElementById("matur");
+food.addEventListener('click', function() {
+    container.innerHTML = ""
+    products.forEach(product => {
+        container.innerHTML += createProductCard(product);
+    });
+})
 
-
-
-
-//Reyndi síðan eitthvað svona fyrir neðan, þar sem ég setti öll peru cards inn í bananar.html og gerði
-// display:block og ætlaði að láta peru cards birtast þegar ýtt er á peru button. En virkaði ekki...  
+ 
 
 document.addEventListener('DOMContentLoaded', function () {
     // Get all the category buttons
@@ -156,15 +184,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const category = this.getAttribute('data-category');
         container.innerHTML = ""
         // Hide all product containers
-        productContainers.forEach(container => {
-          container.style.display = 'none'; // Hide all containers
+        products.forEach(product => {
+          if(category === product.category){
+            container.innerHTML += createProductCard(product);
+          }
         });
-  
-        // Show the product container for the selected category
-        const activeContainer = document.querySelector(`.category-${category}`);
-        if (activeContainer) {
-          activeContainer.style.display = 'block'; // Show the selected container
-        }
+    
   
         // Optionally: Add active class to the clicked button
         categoryButtons.forEach(btn => btn.classList.remove('active'));
