@@ -202,7 +202,7 @@ a {
   width: 90vw; /* Sets width to 90% of the viewport */
   height: 100vh; /* Full height of the viewport */
   background-color: #0073b9;
-  z-index: 9; /* Below the navbar, but above other content */
+  z-index: 30; /* Below the navbar, but above other content */
   overflow-y: auto;
 }
 
