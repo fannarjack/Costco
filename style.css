@@ -766,6 +766,15 @@ button {
   display: none;
   justify-content: center;
   padding: 20px;
+  align-items: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
 }
 .product-card-single {
   background-color: white;
@@ -779,7 +788,12 @@ button {
   box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  margin: auto;
+  margin-top: 5%;
 }
+
+
+
 .product-img-single {
   width: 200px;
   margin: 0 auto; /* Center the image horizontally */
