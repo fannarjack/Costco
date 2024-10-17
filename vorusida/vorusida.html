@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./productCards.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="./vorusida.css">
+
   </head>
   <body>
     <header>
       <div class="nav-bar flex-x">
         <div>
-          <a href="/" class="logo"
-            ><img src="./images/Costco-Logo.wine.svg"
+          <a href="../home/" class="logo"
+            ><img src="../images/Costco-Logo.wine.svg"
           /></a>
         </div>
         <div class="nav-bar-icons">
-          <a href="/"> <img src="./images/magnifying-glass-solid.svg" /></a>
-          <a href="/"> <img src="./images/user-regular.svg" /></a>
-          <a href="/"> <img src="./images/heart-regular.svg" /></a>
-          <a href="/"> <img src="./images/cart-shopping-solid.svg" /></a>
+          <a href="/"> <img src="../images/magnifying-glass-solid.svg" /></a>
+          <a href="/"> <img src="../images/user-regular.svg" /></a>
+          <a href="/"> <img src="../images/heart-regular.svg" /></a>
+          <a href="/"> <img src="../images/cart-shopping-solid.svg" /></a>
           <img
-            src="images/hamburger.svg"
+            src="../images/hamburger.svg"
             alt="hamburger icon"
             class="hamburger"
           />
@@ -39,7 +43,7 @@
             <div class="underlist">
               <li class="matur"><a href="#">Matur</a></li>
               <ul class="mobile-links flokkar">
-                <li><a href="/bananar.html">Ávextir og grænmeti</a></li>
+                <li><a href="./vorusida.html">Ávextir og grænmeti</a></li>
                 <li><a href="">Fiskur</a></li>
                 <li><a href="">Kjöt</a></li>
                 <li><a href="">Mjólkurvörur og egg</a></li>
@@ -93,7 +97,7 @@
       <div class="products-container-single">
         <div class="product-card-single">
           <span class="close">&times;</span>
-          <img class="product-img-single" src="/images/bananar.png" alt="Bananamynd"/>
+          <img class="product-img-single" src="../images/bananar.png" alt="Bananamynd"/>
           <div class="product-text-single">
             <div class="name">
               <p>Bananar</p>
@@ -108,10 +112,10 @@
             </div>
             <div class="price-quantity-single">
               <div class="price-quantity-single-img">
-                <img class="gluten" src="/images/Vector.png" alt="gluten"/>
-                <img class="gluten" src="/images/Group.png" alt="gluten"/>
+                <img class="gluten" src="../images/Vector.png" alt="gluten"/>
+                <img class="gluten" src="../images/Group.png" alt="gluten"/>
               </div>
-              <img class="cart" src="/images/Icon.png" alt="cart"/></a>
+              <img class="cart" src="../images/Icon.png" alt="cart"/></a>
             </div>
             <div class="info-container-single">
               <div class="info-text-single">
@@ -145,6 +149,9 @@
     </main>
 
     <!-- Load the script file for the menu overlay -->
-    <script src="./main.js"></script>
+    <script src="./productCards.js" type="module"></script>
+    <script src="../header.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./categoryBtns.js" type="module"></script>
   </body>
 </html>
