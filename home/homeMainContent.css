@@ -1,0 +1,308 @@
+/* ======================
+    2. Opening hours
+   ====================== */
+
+.opening-hours {
+  padding-left: 30px;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.opening-hours img {
+  width: 22px;
+  margin-right: 5px;
+}
+
+/* ======================
+    3. App Downloads Section
+   ====================== */
+
+   .app-downloads {
+    background-color: #0073b9;
+    margin: 20px 0px 0px; /* Adds margin on top, no margin on sides or bottom */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    padding: 0 30px;
+  }
+  .app-downloads p {
+    margin: 0;
+    font-size: 12px;
+    font-family: futura, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .app-icons {
+    display: flex;
+    align-items: center;
+  }
+  .app-icons img {
+    height: 18px;
+    padding-left: 15px;
+    filter: brightness(0) invert(1);
+  }
+
+
+
+/* ======================
+     4. Hero Section - contains styles for the main heading and the hero
+     ====================== */
+     .hero {
+      display: flex; /* Flexbox used to align content */
+      justify-content: center;
+      width: 100%;
+      height: 30svh; /* Sets height based on a scalable unit (30% of the viewport height) */
+      background-image: url(../images/halloween-gettyimages-1424736925.jpg);
+      background-size: 100% auto;
+      background-position: center center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .hero-text {
+      position: absolute; /* Positions the text absolutely inside the hero */
+      bottom: 40px;
+      right: 30px;
+      text-align: right;
+      color: white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    .hero h4 {
+      font-size: 28px;
+      font-weight: 400;
+    }
+    .hero h1 {
+      text-transform: uppercase;
+      font-size: 28px;
+      margin: 2px 0;
+    }
+    .hero p {
+      font-weight: 400;
+      font-size: 16px;
+      text-align: right;
+    }
+
+
+
+/* ======================
+     . Main Content - styles for the primary content of the page, including informational sections and text styling
+     ====================== */
+
+     /* section-ið fyrir vöruflokka */
+     .info {
+      padding: 20px;
+      font-family: futura;
+    }
+    
+    /* Text-inn og sjá allt */
+    .section-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .section-text h2 {
+      font-size: 18px;
+      color: #1a56db;
+      text-transform: uppercase;
+    }
+    .section-text a {
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+      text-decoration: underline;
+    }
+    
+    /*======================
+    Cards layout - index.html 
+      ======================*/
+    
+    /* Matur og fatnaður */  
+    .card-container {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .card {
+      position: relative;
+      width: 50%;
+      border-radius: 15px;
+      overflow: hidden;
+      display: inline-block;
+      border: 2px solid #0073b9;
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .card-text {
+      position: absolute;
+      text-transform: uppercase;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .card-icon {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      z-index: 2;
+      text-align: center;
+    }
+    .card-icon img {
+      width: 100%;
+      height: 50px;
+    }
+    .categories-card {
+      background-color: #f2f2f2;
+      height: 240px;
+    }
+    /* overlay - matur og fatnaður */
+    .categories-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    /* Fréttir og tilkynningar */
+    .info-news {
+      display: flex;
+      justify-content: center;
+      font-family: futura;
+    }
+    .border {
+      border: 2px solid #0073b9;
+      border-radius: 15px;
+      padding: 20px;
+      width: 83%;
+    }
+    /*Netklúbbur cards*/
+    .card-col1 {
+      position: relative;
+      width: 90%;
+      border-radius: 15px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .card-col {
+      position: relative;
+      width: 40%;
+      border-radius: 15px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .card-3 {
+      background-color: #f2f2f2;
+      height: 190px;
+    }
+    
+    .card-4 {
+      background-color: #f2f2f2;
+      height: 190px;
+    }
+    
+    
+    
+    
+    
+    .card-5 {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      border-radius: 15px;
+      overflow: hidden;
+      display: inline-block;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .card-5 img {
+      width: 100%;
+    }
+    .card-4 img {
+      width: 100%;
+    }
+    .card-3 img {
+      width: 100%;
+    }
+    
+    .get-app h4 {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    .get-app p {
+      font-size: 16px;
+      color: #686868;
+      line-height: 19px;
+      margin-bottom: 20px;
+    }
+    
+    /* buttons á home page */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: futura;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+    
+    .net-club p {
+      font-size: 18px;
+      font-family: futura;
+      margin-bottom: 20px;
+    }
+    .btn-email {
+      padding: 10px 20px;
+      border: 2px solid #0073b9;
+      border-radius: 25px;
+      font-size: 15px;
+      color: #7a7c80;
+      width: 300px;
+      background-color: white;
+    }
+    .btn-sign {
+      background-color: #0073b9;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 15px;
+      width: 120px;
+    }
+    /* lesa meira um costco appið button */
+    .get-app-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+    }
+    .btn-readmore {
+      background-color: #0073b9;
+      color: white;
+      padding: 15px 60px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+    }

@@ -1,0 +1,114 @@
+/* Allt modal cardið */
+.products-container-single {
+  display: none;
+  justify-content: center;
+  
+  align-items: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+/* Eitt og sér card */
+.product-card-single {
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 2%;
+}
+/* close button */
+.close{
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.close:hover,
+.close:focus {
+  color:black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Myndirnar */
+.product-img-single {
+  width: 200px;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+}
+/* pear page */
+.product-img-single-1 {
+  width: 100px;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+  transform: rotate(45deg);
+}
+
+/* Allur textinn á myndinni */
+.product-text-single {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 20px;
+  font-family: futura;
+}
+
+/* Verð, þyngd og magn */
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+.kg-price {
+  font-size: 14px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+/* icons Gluten, Vegan og cart*/
+.price-quantity-single {
+  display: flex;
+  justify-content: space-between; /* Push info icon to the left, cart icon to the right */
+  align-items: center; /* Align items at the bottom */
+  border-top: 1px solid rgba(208, 208, 208, 0.659);
+}
+.gluten {
+  width: 28px;
+  margin-top: 10px;
+}
+.cart {
+  width: 22px;
+}
+
+/*allur textin undir icons*/
+.info-text-single {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 0px 30px 0 0;
+  line-height: 1.8;
+}
+.info-text-single-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  font-size: 15px;
+  margin: 10px 30px 0 0;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}

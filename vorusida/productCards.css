@@ -1,0 +1,90 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* Spacing between each product */
+  padding: 20px;
+  max-width: 1200px; /* You can adjust this */
+  /* Center the container */
+  /* Center the container */
+  cursor: pointer;
+}
+
+/* Each individual product card */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Space out the content */
+  height: 270px; /* auto height so it adjusts to content */
+}
+
+/* uppi í hægra horni */
+.heart-img {
+  width: 30%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 24px;
+}
+
+/* Myndirnar */
+.product-img {
+  width: 120px;
+  margin: 40px auto auto;
+  height: auto;
+  display: block;
+}
+.product-img-pera {
+  width: 60px;
+  margin: 40px auto auto;
+  height: auto;
+  display: block;
+  transform: rotate(45deg);
+}
+.product-img-perupakki {
+  width: 80px;
+  margin: 30px auto auto;
+  height: auto;
+  display: block;
+}
+
+/* Nafnið á product*/
+.product-text p {
+  text-align: left;
+  margin: 5px 0;
+  padding-left: 20px;
+  font-size: 18px;
+  font-family: futura;
+}
+.banana {
+  color: #686868;
+}
+/* verðið og magnið*/
+.strong-price {
+  margin-bottom: 50px;
+}
+
+/*Icon-inn neðst á cardinu*/
+.price-quantity {
+  display: flex;
+  justify-content: space-between; /* Push info icon to the left, cart icon to the right */
+  align-items: flex-end; /* Align items at the bottom */
+  position: absolute;
+  bottom: 14px; /* Align the div at the bottom */
+  left: 0;
+  right: 0;
+  padding: 0 15px; /* Padding to align with the card padding */
+  border-top: 1px solid rgba(208, 208, 208, 0.659);
+}
+
+.price-quantity img {
+  width: 30px; /* Set the size for both icons */
+  height: 20px;
+  margin-top: 10px;
+}
