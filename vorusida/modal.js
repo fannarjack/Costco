@@ -32,6 +32,21 @@
                 }
             }
         });
+
+       closeBtn.onclick = function () {
+        modal.style.display = "none"
+       };
+       window.onclick = function (event) {
+        const target = event.target;
+        if (target == modal) {
+            modal.style.display = "none"
+        }
+       };
+    }
+}
+
+
+/*
         closeBtn.onclick = function () {
             modal.style.display = "none";
         };
@@ -40,51 +55,4 @@
             if (target == modal) {
                 modal.style.display = "none";
             }
-        };
-    }
-}
-/*
-// checka hvort þetta virkar
-    // Modal functionality
-    //const modal = document.getElementById("productModal");
-    const modal = document.querySelector(".products-container-single");
-
-    //const modalProductName = document.getElementById("modalProductName");
-    const modalProductName = document.querySelector(".name");
-
-    //const modalProductImage = document.getElementById("modalProductImage");
-    const modalProductImage = document.querySelector(".product-img-single");
-
-    //const modalProductPrice = document.getElementById("modalProductPrice");
-    const modalProductPrice = document.querySelector(".price");
-
-    
-    const closeBtn = document.getElementsByClassName("close")[0];
-
-    container.addEventListener('click', function(e) {
-        const productCard = e.target.closest('.product-card');
-        if (productCard) {
-            const name = productCard.dataset.name;
-            const price = productCard.dataset.price;
-            const image = productCard.dataset.image;
-
-            modalProductName.textContent = name;
-            modalProductImage.src = image;
-            modalProductImage.alt = name;
-            modalProductPrice.textContent = `${price}`;
-            
-
-            modal.style.display = "block";
-        }
-    });
-
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-        */ 
+        };*/
