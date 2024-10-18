@@ -45,7 +45,7 @@ export const products = [
         name: "Bananar",
         price: "80 kr.",
         unit: "Stk.",
-        image: "../images/bananar1.svg",
+        image: "../images/bananar1.png",
         imageClass: "product-img"
     },
     {
@@ -98,4 +98,3 @@ if (food) {
         }
     });
 }
-

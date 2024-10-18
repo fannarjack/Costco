@@ -55,7 +55,7 @@ interface Product {
       name: "Bananar",
       price: "80 kr.",
       unit: "Stk.",
-      image: "../images/bananar.png",
+      image: "../images/bananar1.png",
       imageClass: "product-img"
     },
     {

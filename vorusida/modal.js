@@ -32,21 +32,6 @@
                 }
             }
         });
-
-       closeBtn.onclick = function () {
-        modal.style.display = "none"
-       };
-       window.onclick = function (event) {
-        const target = event.target;
-        if (target == modal) {
-            modal.style.display = "none"
-        }
-       };
-    }
-}
-
-
-/*
         closeBtn.onclick = function () {
             modal.style.display = "none";
         };
@@ -55,4 +40,6 @@
             if (target == modal) {
                 modal.style.display = "none";
             }
-        };*/
+        };
+    }
+}

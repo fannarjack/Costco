@@ -26,33 +26,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-/*
-//CATEGORY BUTTON
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Get all the category buttons
-  const categoryButtons = document.querySelectorAll('.category-btn');
-
-
-  // Add a click event listener to each button
-
-  categoryButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      // Get the category from the clicked button's data attribute
-      const category = this.getAttribute('data-category');
-      container.innerHTML = ""
-      // Hide all product containers
-      products.forEach(product => {
-        if(category === product.category){
-          container.innerHTML += createProductCard(product);
-        }
-      });
-  
-
-      // Optionally: Add active class to the clicked button
-      categoryButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-});
-*/ 
